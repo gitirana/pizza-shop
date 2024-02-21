@@ -1,3 +1,4 @@
+import { TOrderStatus } from '@/components/order-status'
 import { api } from '@/lib/axios'
 
 export interface GetOrdersQuery {
@@ -10,7 +11,7 @@ export interface GetOrdersQuery {
 export interface Order {
   orderId: string
   createdAt: string
-  status: 'pending' | 'canceled' | 'processing' | 'delivering' | 'delivered'
+  status: TOrderStatus
   customerName: string
   total: number
 }
